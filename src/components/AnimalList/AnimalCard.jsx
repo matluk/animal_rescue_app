@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { useContext } from "react";
 import { UserRoleContext } from "../../utils/context/role";
+import PawsImage from '../../assets/paws.jpeg'
 
 const adopt = "Adopt";
 const edit = "Edit";
@@ -26,8 +27,8 @@ export default function AnimalList({
   const isAdmin = useContext(UserRoleContext);
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia component="img" alt={name} height="240" image={image} />
+    <Card sx={{ maxWidth: 345, minWidth: 345 }}>
+      <CardMedia component="img" alt={name} height="240" image={image || PawsImage} />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {name}
@@ -35,12 +36,12 @@ export default function AnimalList({
         <Typography variant="body2" color="text.secondary">
           {description}
         </Typography>
-        <Box sx={{ display: "flex", gap: 2, mt: 2, height: "32px" }}>
+        <Box sx={{ display: "flex", gap: 2, mt: 2, minHeight: 32 }}>
           {isChipped && <Chip label={chippedLabel} color="success" />}
           {isAdopted && <Chip label={adoptedLabel} color="success" />}
         </Box>
       </CardContent>
-      <CardActions sx={{ justifyContent: "flex-end" }}>
+      <CardActions sx={{ justifyContent: "flex-end", minHeight: 47 }}>
         {!isAdopted && (
           <Button size="small" disabled={isAdopted}>
             {adopt}
