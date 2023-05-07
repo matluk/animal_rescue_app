@@ -1,1 +1,37 @@
-{}
+{
+  "animals": [
+    {
+      "id": 1,
+      "name": "Garfield",
+      "image": "https://www.tuxedo-cat.co.uk/wp-content/uploads/2021/07/persian-tabby-cat-garfield.jpg",
+      "breed": "mačka",
+      "chip": false,
+      "age": 44,
+      "description": "Voli lazanje",
+      "lastSeenAt": "23-09-2022",
+      "adopted": true
+    },
+    {
+      "id": 2,
+      "name": "Snoopy",
+      "image": "https://i.dailymail.co.uk/1s/2023/04/13/09/69777833-11967963-image-a-9_1681373553551.jpg",
+      "breed": "pas",
+      "chip": true,
+      "age": 50,
+      "description": "Više od običnog psa",
+      "lastSeenAt": "13-02-2000",
+      "adopted": false
+    },
+    {
+      "id": 3,
+      "name": "Gregor",
+      "image": "https://cf.ltkcdn.net/cats/cat-training-and-behavior/images/std/322335-800x533-black-cat-lies.jpg",
+      "breed": "mačka",
+      "chip": true,
+      "age": 12,
+      "description": "Crna mačka",
+      "lastSeenAt": "19-02-2022",
+      "adopted": false
+    }
+  ]
+}
