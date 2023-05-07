@@ -77,6 +77,7 @@ export default function AnimalForm({
           name="image"
           control={control}
           muiProps={{ label: "Image" }}
+          helperText=" "
         />
 
         <BaseTextField
@@ -87,6 +88,7 @@ export default function AnimalForm({
             type: "date",
             InputLabelProps: { shrink: true },
           }}
+          helperText=" "
         />
 
         <Box sx={{ display: "flex", justifyContent: "flex-end" }}>

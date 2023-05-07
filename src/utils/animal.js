@@ -1,3 +1,12 @@
+import format from 'date-fns/format';
+
+export const adoptedType = "adopted";
+export const unadoptedType = "unadopted";
+
+export const dogType = "dog";
+export const catType = "cat";
+export const otherType = "other";
+
 export const initAnimal = () => ({
   name: "",
   description: "",
@@ -10,31 +19,31 @@ export const initAnimal = () => ({
 });
 
 export const supportedPetTypes = [
-  { value: "dog", label: "Dog" },
-  { value: "cat", label: "Cat" },
-  { value: "other", label: "Other" },
+  { value: dogType, label: "Dog" },
+  { value: catType, label: "Cat" },
+  { value: otherType, label: "Other" },
 ];
 
 export const adoptionStates = [
-  { label: "Adopted", value: "adopted" },
-  { label: "Unadopted", value: "unadopted" },
+  { value: adoptedType, label: "Adopted" },
+  { value: unadoptedType, label: "Unadopted" },
 ];
 
 export const createFilterByAdoption = (adoptionFilter) => {
   return (animal) => {
     if (adoptionFilter === "all") return true;
-    if (adoptionFilter === "adopted") return animal.isAdopted;
-    if (adoptionFilter === "unadopted") return !animal.isAdopted;
+    if (adoptionFilter === adoptedType) return animal.isAdopted;
+    if (adoptionFilter === unadoptedType) return !animal.isAdopted;
   };
 };
 
 export const createFilterByType = (typeFilter) => {
   return (animal) => {
     if (typeFilter === "all") return true;
-    if (typeFilter === "dog") return animal.type === "dog";
-    if (typeFilter === "cat") return animal.type === "cat";
-    if (typeFilter === "other")
-      return animal.type !== "dog" && animal.type !== "cat";
+    if (typeFilter === dogType) return animal.type === dogType;
+    if (typeFilter === catType) return animal.type === catType;
+    if (typeFilter === otherType)
+      return animal.type !== dogType && animal.type !== catType;
   };
 };
 
@@ -53,13 +62,16 @@ export const serializeAnimal = (data) => {
   return {
     ...data,
     age: parseInt(data.age, 10),
-    image: data.image || null,
+    image: data.image || '',
     lastExaminatedAt: data.lastExaminatedAt
-      ? new Date(data.lastExaminatedAt).toISOString()
-      : null,
+      ? new Date(data.lastExaminatedAt).getTime()
+      : '',
   };
 };
 
 export const deserializeAnimal = (animal) => {
-  return animal;
+  return {
+    ...animal,
+    lastExaminatedAt: animal.lastExaminatedAt ? format(new Date(animal.lastExaminatedAt), 'yyyy-MM-dd') : '',
+  };
 };
