@@ -1,75 +1,90 @@
-import {
-  Box,
-  FormControl,
-  FormControlLabel,
-  FormLabel,
-  Radio,
-  RadioGroup,
-} from "@mui/material";
+import { Box, FormLabel } from "@mui/material";
+import BaseRadioGroup from "../shared/base/BaseRadioGroup";
+import { useForm } from "react-hook-form";
+import { supportedPetTypes, adoptionStates } from "../../utils/animal";
+import { useEffect } from "react";
+import BaseTextField from "../shared/base/BaseTextField";
 
 const typeOfPetLabel = "Type of Pet";
-const dog = "Dog";
-const cat = "Cat";
-const other = "Other";
-const filterLabel = "Filter";
-const all = "All";
-const adopted = "Adopted";
-const nonAdopted = "Non-Adopted";
+const adoptionLabel = "Adoption Status";
 
 export default function AnimalListControls({
-  typeFilter,
-  adoptionFilter,
   setAdoptionFilter,
   setTypeFilter,
+  setNameFilter,
 }) {
+  const { control, watch } = useForm({
+    defaultValues: { type: "all", adoption: "all", name: "" },
+  });
+
+  useEffect(() => {
+    const subscription = watch((value, { name, type }) => {
+      console.log(value, name, type);
+      if (type === "change" && name == "type") {
+        setTypeFilter(value.type);
+      }
+
+      if (type === "change" && name == "adoption") {
+        setAdoptionFilter(value.adoption);
+      }
+
+      if (type === "change" && name == "name") {
+        setNameFilter(value.name);
+      }
+    });
+
+    return () => {
+      subscription.unsubscribe();
+    };
+  }, [watch, setTypeFilter, setAdoptionFilter, setNameFilter]);
+
   return (
     <Box
       sx={{
         display: "flex",
-        flexDirection: { xs: "row", md: "column " },
-        minWidth: 150,
-        pt: 4,
-        pb: 4,
+        alignItems: "center",
+        justifyContent: "center",
+        flexWrap: "wrap",
+        overflow: "auto",
+        pt: 2,
         gap: 4,
       }}
     >
-      <FormControl>
-        <FormLabel id="demo-row-radio-buttons-group-label">
-          {typeOfPetLabel}
-        </FormLabel>
-        <RadioGroup
-          name="row-radio-buttons-group"
-          value={typeFilter}
-          onChange={(event) => setTypeFilter(event.target.value)}
-        >
-          <FormControlLabel value="all" control={<Radio />} label={all} />
-          <FormControlLabel value="dog" control={<Radio />} label={dog} />
-          <FormControlLabel value="cat" control={<Radio />} label={cat} />
-          <FormControlLabel value="other" control={<Radio />} label={other} />
-        </RadioGroup>
-      </FormControl>
-      <FormControl>
-        <FormLabel id="demo-row-radio-buttons-group-label">
-          {filterLabel}
-        </FormLabel>
-        <RadioGroup
-          name="row-radio-buttons-group"
-          value={adoptionFilter}
-          onChange={(event) => setAdoptionFilter(event.target.value)}
-        >
-          <FormControlLabel value="all" control={<Radio />} label={all} />
-          <FormControlLabel
-            value="adopted"
-            control={<Radio />}
-            label={adopted}
-          />
-          <FormControlLabel
-            value="non-adopted"
-            control={<Radio />}
-            label={nonAdopted}
-          />
-        </RadioGroup>
-      </FormControl>
+      <Box
+        sx={{
+          minWidth: 310,
+          maxWidth: 310,
+          height: 102,
+          display: "flex",
+          alignItems: "flex-start",
+          justifyContent: "center",
+          flexDirection: "column",
+          paddingRight: '15px',
+        }}
+      >
+        <FormLabel>Name</FormLabel>
+        <BaseTextField
+          name="name"
+          control={control}
+          muiProps={{ InputLabelProps: { shrink: true }, variant: "standard" }}
+        />
+      </Box>
+
+      <BaseRadioGroup
+        name="type"
+        control={control}
+        label={typeOfPetLabel}
+        radioButtons={[{ label: "All", value: "all" }, ...supportedPetTypes]}
+        formControlStyles={{ minWidth: 310 }}
+      />
+
+      <BaseRadioGroup
+        name="adoption"
+        control={control}
+        label={adoptionLabel}
+        radioButtons={[{ label: "All", value: "all" }, ...adoptionStates]}
+        formControlStyles={{ minWidth: 310 }}
+      />
     </Box>
   );
 }

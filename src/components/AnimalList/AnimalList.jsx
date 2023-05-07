@@ -3,7 +3,11 @@ import { getAnimals } from "../../api/animals";
 import AnimalCard from "./AnimalCard";
 import { Box } from "@mui/material";
 import AnimalListControls from "./AnimalListControls";
-import { createFilterByAdoption, createFilterByType } from "../../utils/animal";
+import {
+  createFilterByAdoption,
+  createFilterByType,
+  createFilterByName,
+} from "../../utils/animal";
 import AnimalEditDialog from "./AnimalEditDialog";
 import { updateAnimal } from "../../api/animals";
 
@@ -11,6 +15,7 @@ export default function AnimalList() {
   const [animals, setAnimals] = useState([]);
   const [adoptionFilter, setAdoptionFilter] = useState("all");
   const [typeFilter, setTypeFilter] = useState("all");
+  const [nameFilter, setNameFilter] = useState("");
   const [editDialog, setEditDialog] = useState(null);
 
   useEffect(() => {
@@ -19,22 +24,21 @@ export default function AnimalList() {
 
   const visibleAnimals = animals
     .filter(createFilterByAdoption(adoptionFilter))
-    .filter(createFilterByType(typeFilter));
+    .filter(createFilterByType(typeFilter))
+    .filter(createFilterByName(nameFilter));
 
   return (
     <Box
       sx={{
         display: "flex",
-        justifyContent: "center",
-        flexDirection: { xs: "column", md: "row" },
+        flexDirection: "column",
       }}
     >
-      {/* <AnimalListControls
-        adoptionFilter={adoptionFilter}
-        typeFilter={typeFilter}
+      <AnimalListControls
         setAdoptionFilter={setAdoptionFilter}
         setTypeFilter={setTypeFilter}
-      /> */}
+        setNameFilter={setNameFilter}
+      />
       <Box
         sx={{
           display: "flex",
@@ -45,19 +49,21 @@ export default function AnimalList() {
           pb: 4,
         }}
       >
-        {visibleAnimals.map((animal) => (
-          <AnimalCard
-            key={animal.id}
-            {...animal}
-            onAdopt={() =>
-              updateAnimal({ ...animal, isAdopted: true })
-                .then(getAnimals)
-                .then(setAnimals)
-                .then(() => setEditDialog(null))
-            }
-            onEdit={() => setEditDialog({ animal })}
-          />
-        ))}
+        {visibleAnimals.length
+          ? visibleAnimals.map((animal) => (
+              <AnimalCard
+                key={animal.id}
+                {...animal}
+                onAdopt={() =>
+                  updateAnimal({ ...animal, isAdopted: true })
+                    .then(getAnimals)
+                    .then(setAnimals)
+                    .then(() => setEditDialog(null))
+                }
+                onEdit={() => setEditDialog({ animal })}
+              />
+            ))
+          : "No animals found"}
       </Box>
       <AnimalEditDialog
         animal={editDialog?.animal}

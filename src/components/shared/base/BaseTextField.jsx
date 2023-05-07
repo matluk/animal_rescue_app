@@ -5,7 +5,8 @@ export default function BaseTextField({
   name,
   control,
   rules,
-  errorMessage,
+  helperText,
+  hasError,
   muiProps = {},
 }) {
   return (
@@ -17,9 +18,9 @@ export default function BaseTextField({
         <TextField
           variant="outlined"
           fullWidth
-          error={!!errorMessage}
+          error={hasError}
           // use empty space to prevent content from moving
-          helperText={errorMessage || " "}
+          helperText={helperText}
           {...muiProps}
           {...field}
         />

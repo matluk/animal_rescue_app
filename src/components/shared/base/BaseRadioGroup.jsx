@@ -10,13 +10,15 @@ import { Controller } from "react-hook-form";
 
 export default function BaseRadioGroup({
   radioButtons,
-  errorMessage,
+  helperText,
   control,
   label,
   name,
+  hasError,
+  formControlStyles
 }) {
   return (
-    <FormControl error={!!errorMessage}>
+    <FormControl error={hasError} sx={formControlStyles}>
       <FormLabel>{label}</FormLabel>
       <Controller
         rules={{ required: true }}
@@ -35,7 +37,7 @@ export default function BaseRadioGroup({
           </RadioGroup>
         )}
       />
-      <FormHelperText>{errorMessage || " "}</FormHelperText>
+      <FormHelperText>{helperText}</FormHelperText>
     </FormControl>
   );
 }

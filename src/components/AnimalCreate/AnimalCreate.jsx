@@ -9,15 +9,17 @@ import { UserRoleContext } from "../../utils/context/role";
 const title = "Add a new animal";
 const addAnimalLabel = "Add Animal";
 
-export default function AnimalInput() {
+export default function AnimalCreate() {
   const navigate = useNavigate();
   const isAdmin = useContext(UserRoleContext);
 
   useEffect(() => {
+    // If the user is not an admin, redirect to the animal list page
     if (!isAdmin) navigate(routes.animalList.path);
   }, [isAdmin, navigate]);
 
   const onSubmit = (animal) => {
+    // after saving redirect to the animal list page
     createAnimal(animal).then(() => navigate(routes.animalList.path));
   };
 

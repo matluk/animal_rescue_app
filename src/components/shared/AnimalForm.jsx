@@ -20,6 +20,7 @@ export default function AnimalForm({
     formState: { errors },
     handleSubmit,
   } = useForm({
+    // initialize the form with the values of the edited animal or with the empty animal
     defaultValues: editedAnimal
       ? deserializeAnimal(editedAnimal)
       : initAnimal(),
@@ -37,7 +38,8 @@ export default function AnimalForm({
           control={control}
           rules={{ required: true }}
           muiProps={{ label: "Name" }}
-          errorMessage={errors.name ? "Name is required" : ""}
+          hasError={!!errors.name}
+          helperText={errors.name ? "Name is required" : " "}
         />
 
         <BaseTextField
@@ -52,11 +54,13 @@ export default function AnimalForm({
             control={control}
             label="Type"
             radioButtons={supportedPetTypes}
-            errorMessage={errors.type ? "Type is required" : ""}
+            hasError={!!errors.type}
+            helperText={errors.type ? "Type is required" : " "}
           />
 
           <BaseSwitch name="isChipped" control={control} label="Chipped" />
 
+          {/* adoption status switch */}
           {/* <BaseSwitch name="isAdopted" control={control} label="Adopted" /> */}
         </Box>
 
@@ -65,7 +69,8 @@ export default function AnimalForm({
           control={control}
           rules={{ required: true, number: true }}
           muiProps={{ label: "Age", type: "number" }}
-          errorMessage={errors.age ? "Age is a required number" : ""}
+          hasError={!!errors.age}
+          helperText={errors.age ? "Age is a required number" : " "}
         />
 
         <BaseTextField

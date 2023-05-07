@@ -15,11 +15,16 @@ export const supportedPetTypes = [
   { value: "other", label: "Other" },
 ];
 
+export const adoptionStates = [
+  { label: "Adopted", value: "adopted" },
+  { label: "Unadopted", value: "unadopted" },
+];
+
 export const createFilterByAdoption = (adoptionFilter) => {
   return (animal) => {
     if (adoptionFilter === "all") return true;
     if (adoptionFilter === "adopted") return animal.isAdopted;
-    if (adoptionFilter === "non-adopted") return !animal.isAdopted;
+    if (adoptionFilter === "unadopted") return !animal.isAdopted;
   };
 };
 
@@ -33,6 +38,16 @@ export const createFilterByType = (typeFilter) => {
   };
 };
 
+export const createFilterByName = (nameFilter) => {
+  return (animal) => {
+    if (!nameFilter) {
+      return true;
+    }
+
+    return animal.name.toLowerCase().includes(nameFilter.toLowerCase());
+  };
+};
+
 export const serializeAnimal = (data) => {
   // tranforms form data into a format that can be sent to the server
   return {
@@ -42,9 +57,9 @@ export const serializeAnimal = (data) => {
     lastExaminatedAt: data.lastExaminatedAt
       ? new Date(data.lastExaminatedAt).toISOString()
       : null,
-  }
-}
+  };
+};
 
 export const deserializeAnimal = (animal) => {
   return animal;
-}
+};

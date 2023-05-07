@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     element: <AnimalList />,
   },
   {
-    path: routes.animalInput.path,
+    path: routes.animalCreate.path,
     element: <AnimalCreate />,
   },
   {

@@ -8,7 +8,7 @@ import {
   Chip,
   Typography,
 } from "@mui/material";
-import { useContext, memo } from "react";
+import { useContext, memo, useState } from "react";
 import { UserRoleContext } from "../../utils/context/role";
 import PawsImage from "../../assets/paws.jpeg";
 
@@ -26,10 +26,14 @@ const memoizedAnimalCard = memo(function AnimalCard({
   onEdit,
   onAdopt,
 }) {
+  const [raised, setRaised] = useState(false);
   const isAdmin = useContext(UserRoleContext);
 
   return (
     <Card
+      raised={raised}
+      onMouseOver={() => setRaised(true)}
+      onMouseOut={() => setRaised(false)}
       sx={{
         width: 345,
         maxWidth: 345,

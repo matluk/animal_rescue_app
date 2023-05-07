@@ -7,7 +7,7 @@ export default {
     path: "/animals",
     name: "Animals",
   },
-  animalInput: {
+  animalCreate: {
     path: "/animal",
     name: "Add Animal",
     requiresAuth: true

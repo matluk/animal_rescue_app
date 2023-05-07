@@ -1,8 +1,6 @@
 import { Dialog, DialogContent, DialogTitle } from "@mui/material";
 import AnimalForm from "../shared/AnimalForm";
 
-const saveLabel = "Save";
-
 export default function AnimalEditDialog({ animal, onClose, onSubmit }) {
   return (
     <Dialog open={!!animal} onClose={onClose}>
@@ -11,7 +9,7 @@ export default function AnimalEditDialog({ animal, onClose, onSubmit }) {
       </DialogTitle>
       <DialogContent>
         <AnimalForm
-          submitButtonText={saveLabel}
+          submitButtonText="Save"
           editedAnimal={animal}
           onSubmit={onSubmit}
         />
