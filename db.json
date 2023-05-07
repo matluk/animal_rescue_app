@@ -8,7 +8,7 @@
       "isChipped": true,
       "age": 3,
       "description": "Buddy is a friendly and energetic dog who loves to play fetch.",
-      "lastExaminatedAt": 1651440000,
+      "lastExaminatedAt": 1662745900000,
       "isAdopted": false
     },
     {
@@ -19,7 +19,7 @@
       "isChipped": false,
       "age": 2,
       "description": "Fluffy is a shy but affectionate cat who loves to cuddle.",
-      "lastExaminatedAt": 1651420000,
+      "lastExaminatedAt": 1662745900000,
       "isAdopted": false
     },
     {
@@ -30,7 +30,7 @@
       "isChipped": true,
       "age": 4,
       "description": "Max is a loyal and well-behaved dog who loves to go on walks.",
-      "lastExaminatedAt": 1651380000,
+      "lastExaminatedAt": 1662745900000,
       "isAdopted": true
     },
     {
@@ -41,7 +41,7 @@
       "isChipped": true,
       "age": 1,
       "description": "Mittens is a playful and curious kitten who loves to explore.",
-      "lastExaminatedAt": 1651350000,
+      "lastExaminatedAt": 1662745900000,
       "isAdopted": false
     },
     {
@@ -52,7 +52,7 @@
       "isChipped": false,
       "age": 2,
       "description": "Rocky is a high-energy dog who loves to run and play.",
-      "lastExaminatedAt": 1651320000,
+      "lastExaminatedAt": 1662745900000,
       "isAdopted": false
     },
     {
@@ -63,7 +63,7 @@
       "isChipped": false,
       "age": 2,
       "description": "Simba is a playful and friendly cat who loves to play with strings.",
-      "lastExaminatedAt": 1651100000,
+      "lastExaminatedAt": 1662745900000,
       "isAdopted": false
     },
     {
@@ -74,7 +74,7 @@
       "isChipped": true,
       "age": 4,
       "description": "Daisy is a smart and affectionate dog who loves to learn new tricks.",
-      "lastExaminatedAt": 1651000000,
+      "lastExaminatedAt": 1662745900000,
       "isAdopted": false
     },
     {
@@ -85,7 +85,7 @@
       "isChipped": true,
       "age": 5,
       "description": "Garfield is a lazy but lovable cat who enjoys napping and eating lasagna.",
-      "lastExaminatedAt": 1650900000,
+      "lastExaminatedAt": 1662745900000,
       "isAdopted": true
     },
     {
@@ -96,7 +96,7 @@
       "isChipped": true,
       "age": 6,
       "description": "Rufus is a loyal and protective dog who loves to go for runs.",
-      "lastExaminatedAt": 1650800000,
+      "lastExaminatedAt": 1662745900000,
       "isAdopted": false
     },
     {
@@ -107,7 +107,7 @@
       "isChipped": false,
       "age": 3,
       "description": "Socks is a curious and adventurous cat who loves to explore new places.",
-      "lastExaminatedAt": 1650700000,
+      "lastExaminatedAt": 1662745900000,
       "isAdopted": true
     },
     {
@@ -118,7 +118,7 @@
       "isChipped": false,
       "age": 1,
       "description": "Kiwi is a colorful and energetic bird who loves to sing and play with toys.",
-      "lastExaminatedAt": 1650600000,
+      "lastExaminatedAt": 1662745900000,
       "isAdopted": false
     },
     {
@@ -129,7 +129,7 @@
       "isChipped": false,
       "age": 2,
       "description": "Goldie is a beautiful and graceful fish who loves to swim and explore her tank.",
-      "lastExaminatedAt": 1650500000,
+      "lastExaminatedAt": 1662745900000,
       "isAdopted": false
     },
     {
@@ -140,7 +140,7 @@
       "isChipped": true,
       "age": 4,
       "description": "Polly is a talkative and sociable parrot who loves to mimic sounds and interact with people.",
-      "lastExaminatedAt": 1650400000,
+      "lastExaminatedAt": 1662745900000,
       "isAdopted": false
     },
     {
@@ -151,7 +151,7 @@
       "isChipped": true,
       "age": 3,
       "description": "Bubbles is a playful and curious fish who loves to swim through bubbles and hide in plants.",
-      "lastExaminatedAt": 1650300000,
+      "lastExaminatedAt": 1662745900000,
       "isAdopted": true
     },
     {
@@ -162,8 +162,334 @@
       "isChipped": false,
       "age": 2,
       "description": "Tweety is a sweet and gentle bird who loves to chirp and cuddle with her favorite person.",
-      "lastExaminatedAt": 1650200000,
+      "lastExaminatedAt": 1662745900000,
       "isAdopted": true
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "title": "Appreciation Day",
+      "description": "To celebrate our amazing volunteers, we're hosting a special Volunteer Appreciation Day event. We couldn't do what we do without the hard work and dedication of our volunteers.",
+      "isImportant": true,
+      "createdAt": 1662745900000
+    },
+    {
+      "id": 2,
+      "title": "Kitten Season",
+      "description": "It's kitten season again, and that means we'll be seeing a lot of cute and cuddly kittens coming through our doors. While kittens are undeniably adorable, they also require a lot of care.",
+      "isImportant": true,
+      "createdAt": 1662745000000
+    },
+    {
+      "id": 3,
+      "title": "Adopt a Pet",
+      "description": "We have dogs, cats, and other small animals looking for their forever homes, and we'd love to help you find your perfect match.",
+      "isImportant": false,
+      "createdAt": 1662745100000
+    },
+    {
+      "id": 4,
+      "title": "Virus Awareness",
+      "description": "Did you know that cats can contract Feline Immunodeficiency Virus (FIV)? This virus attacks a cat's immune system and can cause a number of health issues.",
+      "isImportant": false,
+      "createdAt": 1662745200000
+    },
+    {
+      "id": 5,
+      "title": "Hurricane Relief",
+      "description": "We're working with local shelters and organizations to rescue animals in need, provide medical care, and help reunite lost pets with their owners.",
+      "isImportant": true,
+      "createdAt": 1662745300000
+    },
+    {
+      "id": 6,
+      "title": "Clear the Shelters",
+      "description": "Join us for Clear the Shelters Day and help us find homes for all of our furry friends! We're waiving adoption fees and offering special discounts on pet supplies.",
+      "isImportant": true,
+      "createdAt": 1662745400000
+    },
+    {
+      "id": 7,
+      "title": "Holiday Donations",
+      "description": "Help us make the holidays a little brighter for our furry friends by participating in our holiday donation drive.",
+      "isImportant": false,
+      "createdAt": 1662745500000
+    },
+    {
+      "id": 9,
+      "title": "Valentine's Day",
+      "description": "Fall in love with a new furry friend this Valentine's Day! Join us for our adoption event and meet some of our adoptable pets.",
+      "isImportant": true,
+      "createdAt": 1662745600000
+    },
+    {
+      "id": 10,
+      "title": "Puppy Socialization",
+      "description": "Is your new puppy in need of socialization? Join us for our puppy socialization class, where your furry friend can learn valuable skills and meet other puppies.",
+      "isImportant": false,
+      "createdAt": 1650182400000
+    },
+    {
+      "id": 11,
+      "title": "Summer Safety",
+      "description": "Summer can be a fun time for pets, but it can also be dangerous. Make sure your furry friends stay safe in the summer heat by providing plenty of fresh water and shade.",
+      "isImportant": true,
+      "createdAt": 1637619200000
+    },
+    {
+      "id": 12,
+      "title": "National Dog Day",
+      "description": "Celebrate National Dog Day with a new furry friend! Join us for our adoption event and meet some of our adoptable dogs. We'll have treats for both you and your furry friend.",
+      "isImportant": true,
+      "createdAt": 1625056000000
+    },
+    {
+      "id": 13,
+      "title": "Photos with Santa",
+      "description": "It's that time of year again! Bring your furry friend to our Pet Photos with Santa event and get a keepsake photo of your pet with jolly old St. Nick.",
+      "isImportant": false,
+      "createdAt": 1612492800000
+    },
+    {
+      "id": 14,
+      "title": "Foster Orientation",
+      "description": "Attend our Foster Orientation and learn all about our foster program. Our foster parents play a critical role in helping our animals find their forever homes.",
+      "isImportant": false,
+      "createdAt": 1599929600000
+    },
+    {
+      "id": 15,
+      "title": "Kitty Playtime",
+      "description": "Join us for Kitty Playtime, where you can spend quality time with our adoptable cats and kittens. Our playtime sessions are a great way to get to know our feline friends and see their personalities.",
+      "isImportant": true,
+      "createdAt": 1587366400000
+    }
+  ],
+  "donations": [
+    {
+      "id": 1,
+      "type": "food",
+      "description": "High-quality dog food for large breeds",
+      "value": 50,
+      "category": "seeking"
+    },
+    {
+      "id": 2,
+      "type": "medicines",
+      "description": "Heartworm prevention medication for cats",
+      "value": 20,
+      "category": "donated"
+    },
+    {
+      "id": 3,
+      "type": "toys",
+      "description": "Interactive puzzle toy for dogs",
+      "value": 15,
+      "category": "seeking"
+    },
+    {
+      "id": 4,
+      "type": "vet-costs",
+      "description": "Surgery for a broken leg on a stray cat",
+      "value": 300,
+      "category": "offered"
+    },
+    {
+      "id": 5,
+      "type": "food",
+      "description": "Canned food for senior dogs",
+      "value": 25,
+      "category": "seeking"
+    },
+    {
+      "id": 6,
+      "type": "medicines",
+      "description": "Antibiotics for a kitten with a respiratory infection",
+      "value": 35,
+      "category": "donated"
+    },
+    {
+      "id": 7,
+      "type": "toys",
+      "description": "Chew toys for puppies",
+      "value": 10,
+      "category": "seeking"
+    },
+    {
+      "id": 8,
+      "type": "vet-costs",
+      "description": "Dental cleaning for a senior dog",
+      "value": 150,
+      "category": "donated"
+    },
+    {
+      "id": 9,
+      "type": "food",
+      "description": "Dry food for kittens",
+      "value": 20,
+      "category": "seeking"
+    },
+    {
+      "id": 10,
+      "type": "medicines",
+      "description": "Flea medication for dogs",
+      "value": 25,
+      "category": "offered"
+    },
+    {
+      "id": 11,
+      "type": "toys",
+      "description": "Catnip toys for cats",
+      "value": 8,
+      "category": "seeking"
+    },
+    {
+      "id": 12,
+      "type": "vet-costs",
+      "description": "X-rays for a dog with a suspected broken rib",
+      "value": 200,
+      "category": "donated"
+    },
+    {
+      "id": 13,
+      "type": "food",
+      "description": "Wet food for cats with sensitive stomachs",
+      "value": 30,
+      "category": "seeking"
+    },
+    {
+      "id": 14,
+      "type": "medicines",
+      "description": "Joint supplements for an elderly dog",
+      "value": 40,
+      "category": "donated"
+    },
+    {
+      "id": 15,
+      "type": "toys",
+      "description": "Squeaky toys for dogs",
+      "value": 12,
+      "category": "seeking"
+    },
+    {
+      "id": 16,
+      "type": "food",
+      "description": "Rawhide chews for dogs",
+      "value": 20,
+      "category": "offered"
+    },
+    {
+      "id": 17,
+      "type": "medicines",
+      "description": "Flea and tick prevention medication for cats",
+      "value": 30,
+      "category": "seeking"
+    },
+    {
+      "id": 18,
+      "type": "toys",
+      "description": "Kong toys for dogs",
+      "value": 15,
+      "category": "donated"
+    },
+    {
+      "id": 19,
+      "type": "vet-costs",
+      "description": "Surgery for a cat with bladder stones",
+      "value": 400,
+      "category": "seeking"
+    },
+    {
+      "id": 20,
+      "type": "food",
+      "description": "Grain-free dog food for dogs with food allergies",
+      "value": 45,
+      "category": "donated"
+    },
+    {
+      "id": 21,
+      "type": "medicines",
+      "description": "Heart medication for a senior dog with heart disease",
+      "value": 50,
+      "category": "seeking"
+    },
+    {
+      "id": 22,
+      "type": "toys",
+      "description": "Feather wand toys for cats",
+      "value": 12,
+      "category": "offered"
+    },
+    {
+      "id": 23,
+      "type": "vet-costs",
+      "description": "Emergency medical care for a dog hit by a car",
+      "value": 1000,
+      "category": "seeking"
+    },
+    {
+      "id": 24,
+      "type": "food",
+      "description": "Freeze-dried raw food for cats",
+      "value": 35,
+      "category": "donated"
+    },
+    {
+      "id": 25,
+      "type": "medicines",
+      "description": "Eye drops for a dog with an eye infection",
+      "value": 25,
+      "category": "seeking"
+    },
+    {
+      "id": 26,
+      "type": "toys",
+      "description": "Interactive laser toys for cats",
+      "value": 20,
+      "category": "donated"
+    },
+    {
+      "id": 27,
+      "type": "vet-costs",
+      "description": "Ultrasound for a pregnant dog",
+      "value": 250,
+      "category": "seeking"
+    },
+    {
+      "id": 28,
+      "type": "food",
+      "description": "Senior cat food with added joint support",
+      "value": 30,
+      "category": "offered"
+    },
+    {
+      "id": 29,
+      "type": "medicines",
+      "description": "Antihistamines for a dog with allergies",
+      "value": 15,
+      "category": "seeking"
+    },
+    {
+      "id": 30,
+      "type": "toys",
+      "description": "Nylabone chew toys for dogs",
+      "value": 10,
+      "category": "donated"
+    },
+    {
+      "value": 123,
+      "type": "money",
+      "description": "dasdasdasdas",
+      "category": "seeking",
+      "id": 31
+    },
+    {
+      "value": 3232,
+      "type": "money",
+      "description": "3213123123",
+      "category": "offered",
+      "id": 32
     }
   ]
 }
