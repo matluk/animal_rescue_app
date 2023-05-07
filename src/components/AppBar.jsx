@@ -14,7 +14,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Switch from "@mui/material/Switch";
-import { UserRoleContext } from "../utils/role";
+import { UserRoleContext } from "../utils/context/role";
 import routes from "../routes";
 
 const drawerWidth = 240;

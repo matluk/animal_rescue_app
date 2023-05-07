@@ -6,7 +6,7 @@ import AnimalInput from "./components/AnimalInput/AnimalInput.jsx";
 import Notifications from "./components/Notifications/Notifications.jsx";
 import Donations from "./components/Donations/Donations.jsx";
 import AppBar from "./components/AppBar.jsx";
-import { UserRoleContext } from "./utils/role.js";
+import { UserRoleContext } from "./utils/context/role.js";
 import routes from "./routes.js";
 
 const router = createBrowserRouter([
