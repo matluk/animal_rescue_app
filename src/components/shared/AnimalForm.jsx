@@ -3,47 +3,35 @@ import { useForm } from "react-hook-form";
 import BaseTextField from "../shared/base/BaseTextField";
 import BaseSwitch from "../shared/base/BaseSwitch";
 import BaseRadioGroup from "../shared/base/BaseRadioGroup";
+import {
+  initAnimal,
+  supportedPetTypes,
+  serializeAnimal,
+  deserializeAnimal,
+} from "../../utils/animal";
 
-const createAnimal = () => ({
-  name: "",
-  description: "",
-  type: "",
-  isChipped: false,
-  isAdopted: false,
-  age: "",
-  image: "",
-  lastExaminatedAt: "",
-});
-
-const supportedPetTypes = [
-  { value: "dog", label: "Dog" },
-  { value: "cat", label: "Cat" },
-  { value: "other", label: "Other" },
-];
-
-export default function AnimalForm({ submitButtonText, onSubmit }) {
+export default function AnimalForm({
+  submitButtonText,
+  onSubmit,
+  editedAnimal,
+}) {
   const {
     control,
     formState: { errors },
     handleSubmit,
   } = useForm({
-    defaultValues: createAnimal(),
+    defaultValues: editedAnimal
+      ? deserializeAnimal(editedAnimal)
+      : initAnimal(),
   });
 
   const submitCallback = (data) => {
-    onSubmit({
-      ...data,
-      age: parseInt(data.age, 10),
-      image: data.image || null,
-      lastExaminatedAt: data.lastExaminatedAt
-        ? new Date(data.lastExaminatedAt).toISOString()
-        : null,
-    });
+    onSubmit(serializeAnimal(data));
   };
 
   return (
     <form onSubmit={handleSubmit(submitCallback)}>
-      <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+      <Box sx={{ display: "flex", flexDirection: "column", gap: 2, mt: 1 }}>
         <BaseTextField
           name="name"
           control={control}
@@ -68,7 +56,8 @@ export default function AnimalForm({ submitButtonText, onSubmit }) {
           />
 
           <BaseSwitch name="isChipped" control={control} label="Chipped" />
-          <BaseSwitch name="isAdopted" control={control} label="Adopted" />
+
+          {/* <BaseSwitch name="isAdopted" control={control} label="Adopted" /> */}
         </Box>
 
         <BaseTextField

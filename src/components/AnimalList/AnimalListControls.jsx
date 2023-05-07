@@ -17,10 +17,10 @@ const adopted = "Adopted";
 const nonAdopted = "Non-Adopted";
 
 export default function AnimalListControls({
-  type,
-  filter,
-  setFilter,
-  setType,
+  typeFilter,
+  adoptionFilter,
+  setAdoptionFilter,
+  setTypeFilter,
 }) {
   return (
     <Box
@@ -39,8 +39,8 @@ export default function AnimalListControls({
         </FormLabel>
         <RadioGroup
           name="row-radio-buttons-group"
-          value={type}
-          onChange={(event) => setType(event.target.value)}
+          value={typeFilter}
+          onChange={(event) => setTypeFilter(event.target.value)}
         >
           <FormControlLabel value="all" control={<Radio />} label={all} />
           <FormControlLabel value="dog" control={<Radio />} label={dog} />
@@ -54,8 +54,8 @@ export default function AnimalListControls({
         </FormLabel>
         <RadioGroup
           name="row-radio-buttons-group"
-          value={filter}
-          onChange={(event) => setFilter(event.target.value)}
+          value={adoptionFilter}
+          onChange={(event) => setAdoptionFilter(event.target.value)}
         >
           <FormControlLabel value="all" control={<Radio />} label={all} />
           <FormControlLabel

@@ -29,6 +29,10 @@ function DrawerAppBar(props) {
     setMobileOpen((prevState) => !prevState);
   };
 
+  const visibleRoutes = Object.values(routes).filter((route) => {
+    return isAdmin ? true : !route.requiresAuth;
+  });
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
@@ -36,7 +40,7 @@ function DrawerAppBar(props) {
       </Typography>
       <Divider />
       <List>
-        {Object.values(routes).map((item) => (
+        {visibleRoutes.map((item) => (
           <ListItem key={item.name} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText
@@ -75,7 +79,7 @@ function DrawerAppBar(props) {
             {appTitle}
           </Typography>
           <Box sx={{ display: { md: "block", xs: "none" }, marginLeft: 2 }}>
-            {Object.values(routes).map((item) => (
+            {visibleRoutes.map((item) => (
               <Button
                 key={item.name}
                 sx={{ color: "#fff" }}

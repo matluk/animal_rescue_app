@@ -5,11 +5,12 @@ export default {
   },
   animalList: {
     path: "/animals",
-    name: "Animals"
+    name: "Animals",
   },
   animalInput: {
     path: "/animal",
-    name: "Add Animal"
+    name: "Add Animal",
+    requiresAuth: true
   },
   donations: {
     path: "/donations",

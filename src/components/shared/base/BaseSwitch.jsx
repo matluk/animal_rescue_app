@@ -7,7 +7,7 @@ export default function BaseSwitch({ control, name, label }) {
       control={control}
       name={name}
       render={({ field }) => (
-        <FormControlLabel label={label} control={<Switch {...field} />} />
+        <FormControlLabel label={label} control={<Switch checked={field.value} {...field} />} />
       )}
     />
   );

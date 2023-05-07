@@ -2,7 +2,7 @@ import { useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./components/About/About.jsx";
 import AnimalList from "./components/AnimalList/AnimalList.jsx";
-import AnimalInput from "./components/AnimalInput/AnimalInput.jsx";
+import AnimalCreate from "./components/AnimalCreate/AnimalCreate.jsx";
 import Notifications from "./components/Notifications/Notifications.jsx";
 import Donations from "./components/Donations/Donations.jsx";
 import AppBar from "./components/AppBar.jsx";
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
   },
   {
     path: routes.animalInput.path,
-    element: <AnimalInput />,
+    element: <AnimalCreate />,
   },
   {
     path: routes.donations.path,
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  const [isAdmin, setIsAdmin] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(true);
 
   return (
     <UserRoleContext.Provider value={isAdmin}>
