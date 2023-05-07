@@ -2,36 +2,168 @@
   "animals": [
     {
       "id": 1,
-      "name": "Garfield",
-      "image": "https://www.tuxedo-cat.co.uk/wp-content/uploads/2021/07/persian-tabby-cat-garfield.jpg",
-      "breed": "mačka",
-      "chip": false,
-      "age": 44,
-      "description": "Voli lazanje",
-      "lastSeenAt": "23-09-2022",
-      "adopted": true
+      "name": "Buddy",
+      "image": "https://images.unsplash.com/photo-1561037404-61cd46aa615b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+      "type": "dog",
+      "isChipped": true,
+      "age": 3,
+      "description": "Buddy is a friendly and energetic dog who loves to play fetch.",
+      "lastSeenAt": 1651440000,
+      "isAdopted": false
     },
     {
       "id": 2,
-      "name": "Snoopy",
-      "image": "https://i.dailymail.co.uk/1s/2023/04/13/09/69777833-11967963-image-a-9_1681373553551.jpg",
-      "breed": "pas",
-      "chip": true,
-      "age": 50,
-      "description": "Više od običnog psa",
-      "lastSeenAt": "13-02-2000",
-      "adopted": false
+      "name": "Fluffy",
+      "image": "https://images.unsplash.com/photo-1519052537078-e6302a4968d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
+      "type": "cat",
+      "isChipped": false,
+      "age": 2,
+      "description": "Fluffy is a shy but affectionate cat who loves to cuddle.",
+      "lastSeenAt": 1651420000,
+      "isAdopted": false
     },
     {
       "id": 3,
-      "name": "Gregor",
-      "image": "https://cf.ltkcdn.net/cats/cat-training-and-behavior/images/std/322335-800x533-black-cat-lies.jpg",
-      "breed": "mačka",
-      "chip": true,
-      "age": 12,
-      "description": "Crna mačka",
-      "lastSeenAt": "19-02-2022",
-      "adopted": false
+      "name": "Max",
+      "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
+      "type": "dog",
+      "isChipped": true,
+      "age": 4,
+      "description": "Max is a loyal and well-behaved dog who loves to go on walks.",
+      "lastSeenAt": 1651380000,
+      "isAdopted": true
+    },
+    {
+      "id": 4,
+      "name": "Mittens",
+      "image": "https://images.unsplash.com/photo-1491485880348-85d48a9e5312?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
+      "type": "cat",
+      "isChipped": true,
+      "age": 1,
+      "description": "Mittens is a playful and curious kitten who loves to explore.",
+      "lastSeenAt": 1651350000,
+      "isAdopted": false
+    },
+    {
+      "id": 5,
+      "name": "Rocky",
+      "image": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2148&q=80",
+      "type": "dog",
+      "isChipped": false,
+      "age": 2,
+      "description": "Rocky is a high-energy dog who loves to run and play.",
+      "lastSeenAt": 1651320000,
+      "isAdopted": false
+    },
+    {
+      "id": 6,
+      "name": "Simba",
+      "image": "https://images.unsplash.com/photo-1626602411112-10742f9a3ab8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2148&q=80",
+      "type": "cat",
+      "isChipped": false,
+      "age": 2,
+      "description": "Simba is a playful and friendly cat who loves to play with strings.",
+      "lastSeenAt": 1651100000,
+      "isAdopted": false
+    },
+    {
+      "id": 7,
+      "name": "Daisy",
+      "image": "https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=985&q=80",
+      "type": "dog",
+      "isChipped": true,
+      "age": 4,
+      "description": "Daisy is a smart and affectionate dog who loves to learn new tricks.",
+      "lastSeenAt": 1651000000,
+      "isAdopted": false
+    },
+    {
+      "id": 8,
+      "name": "Garfield",
+      "image": "https://images.unsplash.com/photo-1584290867415-527a8475726d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
+      "type": "cat",
+      "isChipped": true,
+      "age": 5,
+      "description": "Garfield is a lazy but lovable cat who enjoys napping and eating lasagna.",
+      "lastSeenAt": 1650900000,
+      "isAdopted": true
+    },
+    {
+      "id": 9,
+      "name": "Rufus",
+      "image": "https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
+      "type": "dog",
+      "isChipped": true,
+      "age": 6,
+      "description": "Rufus is a loyal and protective dog who loves to go for runs.",
+      "lastSeenAt": 1650800000,
+      "isAdopted": false
+    },
+    {
+      "id": 10,
+      "name": "Socks",
+      "image": "https://images.unsplash.com/photo-1597626133663-53df9633b799?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
+      "type": "cat",
+      "isChipped": false,
+      "age": 3,
+      "description": "Socks is a curious and adventurous cat who loves to explore new places.",
+      "lastSeenAt": 1650700000,
+      "isAdopted": true
+    },
+    {
+      "id": 11,
+      "name": "Kiwi",
+      "image": "https://images.unsplash.com/photo-1602000153456-db4aea496f16?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
+      "type": "bird",
+      "isChipped": false,
+      "age": 1,
+      "description": "Kiwi is a colorful and energetic bird who loves to sing and play with toys.",
+      "lastSeenAt": 1650600000,
+      "isAdopted": false
+    },
+    {
+      "id": 12,
+      "name": "Goldie",
+      "image": "https://images.unsplash.com/photo-1592067068562-11490d9515b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
+      "type": "fish",
+      "isChipped": false,
+      "age": 2,
+      "description": "Goldie is a beautiful and graceful fish who loves to swim and explore her tank.",
+      "lastSeenAt": 1650500000,
+      "isAdopted": false
+    },
+    {
+      "id": 13,
+      "name": "Polly",
+      "image": "https://images.unsplash.com/photo-1536769707221-1e05fb8fb074?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2376&q=80",
+      "type": "parrot",
+      "isChipped": true,
+      "age": 4,
+      "description": "Polly is a talkative and sociable parrot who loves to mimic sounds and interact with people.",
+      "lastSeenAt": 1650400000,
+      "isAdopted": false
+    },
+    {
+      "id": 14,
+      "name": "Bubbles",
+      "image": "https://images.unsplash.com/photo-1520989244660-118e51ae94bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
+      "type": "fish",
+      "isChipped": true,
+      "age": 3,
+      "description": "Bubbles is a playful and curious fish who loves to swim through bubbles and hide in plants.",
+      "lastSeenAt": 1650300000,
+      "isAdopted": true
+    },
+    {
+      "id": 15,
+      "name": "Tweety",
+      "image": "https://images.unsplash.com/photo-1458410489211-ba19aa2f2902?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2392&q=80",
+      "type": "bird",
+      "isChipped": false,
+      "age": 2,
+      "description": "Tweety is a sweet and gentle bird who loves to chirp and cuddle with her favorite person.",
+      "lastSeenAt": 1650200000,
+      "isAdopted": true
     }
   ]
 }

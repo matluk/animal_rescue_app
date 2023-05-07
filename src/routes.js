@@ -4,12 +4,12 @@ export default {
     name: "About"
   },
   animalList: {
-    path: "/animal-list",
-    name: "Animal List"
+    path: "/animals",
+    name: "Animals"
   },
   animalInput: {
-    path: "/animal-input",
-    name: "Animal Input"
+    path: "/animal",
+    name: "Add Animal"
   },
   donations: {
     path: "/donations",

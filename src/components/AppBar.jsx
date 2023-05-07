@@ -18,7 +18,7 @@ import { UserRoleContext } from "../utils/context/role";
 import routes from "../routes";
 
 const drawerWidth = 240;
-const appTitle = "Animal Rescue App";
+const appTitle = "Animal Rescue";
 
 function DrawerAppBar(props) {
   const isAdmin = useContext(UserRoleContext);
