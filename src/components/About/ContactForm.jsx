@@ -1,4 +1,4 @@
-import { FormControl, TextField, Typography } from "@mui/material";
+import { FormControl, TextField, Typography, Button } from "@mui/material";
 
 const sendUsMessageLabel = "Send us a message";
 
@@ -18,6 +18,9 @@ export default function GeneralInfo() {
           rows={10}
         />
       </FormControl>
+      <Button variant="contained" sx={{ mb: 10 }}>
+        Submit
+      </Button>
     </>
   );
 }

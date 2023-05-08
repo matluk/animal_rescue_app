@@ -32,8 +32,10 @@ export default function Notifications() {
         display: "flex",
         alignItems: "center",
         flexDirection: "column",
+        justifyContent: "center",
         mt: 4,
         gap: 4,
+        width:"100vh"
       }}
     >
       <Box sx={{ width: 600 }}>

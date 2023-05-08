@@ -64,9 +64,11 @@ export default function Donations() {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
+        maxWidth:700,
+        width:"100vh"
       }}
     >
-      <Box sx={{ width: 700, display: "flex", mt: 2 }}>
+      <Box sx={{ minWidth: 700, display: "flex", mt: 2 }}>
         <Button
           color="primary"
           variant="contained"
@@ -76,7 +78,7 @@ export default function Donations() {
         </Button>
         <Dialog open={dialog} onClose={() => setDialog(false)}>
           <DialogTitle>{isAdmin ? "Request donation" : "Donate"}</DialogTitle>
-          <DialogContent sx={{ width: 500 }}>
+          <DialogContent sx={{ maxWidth: 500 }}>
             <DonationForm onSubmit={onSubmit} />
           </DialogContent>
         </Dialog>
@@ -88,7 +90,8 @@ export default function Donations() {
           alignItems: "center",
           gap: 4,
           mt: 2,
-          maxWidth: 700,
+          minWidth:700,
+          overflowX:"scroll",
         }}
       >
         <Box>
