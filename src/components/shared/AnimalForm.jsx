@@ -60,8 +60,7 @@ export default function AnimalForm({
 
           <BaseSwitch name="isChipped" control={control} label="Chipped" />
 
-          {/* adoption status switch */}
-          {/* <BaseSwitch name="isAdopted" control={control} label="Adopted" /> */}
+          <BaseSwitch name="isAdopted" control={control} label="Adopted" />
         </Box>
 
         <BaseTextField
