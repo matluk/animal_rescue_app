@@ -164,6 +164,66 @@
       "description": "Tweety is a sweet and gentle bird who loves to chirp and cuddle with her favorite person.",
       "lastExaminatedAt": 1662745900000,
       "isAdopted": true
+    },
+    {
+      "id": 16,
+      "name": "Rusty",
+      "type": "dog",
+      "isChipped": true,
+      "age": 2,
+      "description": "Rusty is a playful and adventurous dog with a love for exploring the outdoors.",
+      "lastExaminatedAt": 1693764120000,
+      "isAdopted": false
+    },
+    {
+      "id": 17,
+      "name": "Smokey",
+      "type": "cat",
+      "isChipped": false,
+      "age": 3,
+      "description": "Smokey is a calm and affectionate cat with a beautiful gray coat.",
+      "lastExaminatedAt": 1691020800000,
+      "isAdopted": false
+    },
+    {
+      "id": 18,
+      "name": "Bailey",
+      "type": "dog",
+      "isChipped": true,
+      "age": 4,
+      "description": "Bailey is a gentle and well-behaved dog who enjoys lounging in the sun.",
+      "lastExaminatedAt": 1688169280000,
+      "isAdopted": true
+    },
+    {
+      "id": 19,
+      "name": "Whiskers",
+      "type": "cat",
+      "isChipped": true,
+      "age": 2,
+      "description": "Whiskers is a playful and mischievous cat with a love for climbing.",
+      "lastExaminatedAt": 1685421860000,
+      "isAdopted": false
+    },
+    {
+      "id": 20,
+      "name": "Max",
+      "type": "dog",
+      "isChipped": false,
+      "age": 2,
+      "description": "Max is an energetic and friendly dog who loves to run and play.",
+      "lastExaminatedAt": 1682574440000,
+      "isAdopted": true
+    },
+    {
+      "id": 21,
+      "name": "Maxy",
+      "type": "dog",
+      "isChipped": false,
+      "age": 2,
+      "description": "Rocky is a playful and friendly dog who enjoys fetching balls.",
+      "lastExaminatedAt": 1682574440000,
+      "isAdopted": true
     }
   ],
   "notifications": [

@@ -19,7 +19,7 @@ export default function AnimalListControls({
 
   useEffect(() => {
     const subscription = watch((value, { name, type }) => {
-      console.log(value, name, type);
+      //console.log(value, name, type);
       if (type === "change" && name == "type") {
         setTypeFilter(value.type);
       }

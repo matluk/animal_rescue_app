@@ -2,6 +2,7 @@ import { Box, Button } from "@mui/material";
 import { useForm } from "react-hook-form";
 import BaseTextField from "../shared/base/BaseTextField";
 import BaseRadioGroup from "../shared/base/BaseRadioGroup";
+import { supportedTypes } from "../../utils/donation.js";
 
 export default function DonationForm({ onSubmit }) {
   const {
@@ -25,12 +26,7 @@ export default function DonationForm({ onSubmit }) {
           name="type"
           control={control}
           label="Type"
-          radioButtons={[
-            { value: "money", label: "Money" },
-            { value: "food", label: "Food" },
-            { value: "vet-costs", label: "Vet Costs" },
-            { value: "medicines", label: "Medicines" },
-          ]}
+          radioButtons={supportedTypes}
           hasError={!!errors.type}
           helperText={errors.type ? "Type is required" : " "}
         />

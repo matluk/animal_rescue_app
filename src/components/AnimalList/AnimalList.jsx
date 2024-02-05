@@ -10,22 +10,26 @@ import {
 } from "../../utils/animal";
 import AnimalEditDialog from "./AnimalEditDialog";
 import { updateAnimal } from "../../api/animals";
+import AppPagination from "../shared/AppPagination";
 
 export default function AnimalList() {
   const [animals, setAnimals] = useState([]);
+  const [animalsPage, setAnimalsPage] = useState([]);
   const [adoptionFilter, setAdoptionFilter] = useState("all");
   const [typeFilter, setTypeFilter] = useState("all");
   const [nameFilter, setNameFilter] = useState("");
   const [editDialog, setEditDialog] = useState(null);
 
-  useEffect(() => {
-    getAnimals().then((animals) => setAnimals(animals));
-  }, []);
 
-  const visibleAnimals = animals
-    .filter(createFilterByAdoption(adoptionFilter))
-    .filter(createFilterByType(typeFilter))
-    .filter(createFilterByName(nameFilter));
+  const visibleAnimals = animals;
+  // const visibleAnimals = animals
+  //   .filter(createFilterByAdoption(adoptionFilter))
+  //   .filter(createFilterByType(typeFilter))
+  //   .filter(createFilterByName(nameFilter));
+
+  // useEffect(() => {
+  //   getAnimals().then((animals) => setAnimals(animals));
+  // }, []);
 
   return (
     <Box
@@ -75,6 +79,7 @@ export default function AnimalList() {
             .then(() => setEditDialog(null))
         }
       />
+      <AppPagination setAnimalsPage={(p) => setAnimals(p)} filters={{adoptionFilter, typeFilter, nameFilter}} />
     </Box>
   );
 }

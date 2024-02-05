@@ -43,3 +43,10 @@ function getTypeLabel(type) {
 function formatCurrency(value) {
   return `${value} $`;
 }
+
+export const supportedTypes = [
+  { value: "money", label: "Money" },
+  { value: "food", label: "Food" },
+  { value: "vet-costs", label: "Vet Costs" },
+  { value: "medicines", label: "Medicines" },
+]
